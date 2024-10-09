@@ -130,8 +130,9 @@ X_valid_plus = X_valid.copy()
 
 # Проход по всем столбцам с пропущенными значениями
 for col in cols_with_missing:
-    # Создаем новый столбец с суффиксом '_was_missing', который указывает, 
-    # было ли значение в этом столбце пропущено (True) или нет (False) для обучающей выборки
+    # Создаем новый столбец с суффиксом '_was_missing', который указывает,
+    # было ли значение в этом столбце пропущено (True)
+    # или нет (False) для обучающей выборки
     X_train_plus[col + '_was_missing'] = X_train_plus[col].isnull()
 
     # Аналогично, создаем столбец для валидационной выборки
@@ -146,7 +147,7 @@ imputed_X_train_plus = pd.DataFrame(my_imputer.fit_transform(X_train_plus))
 # Заполняем пропущенные значения в валидационной выборке
 imputed_X_valid_plus = pd.DataFrame(my_imputer.transform(X_valid_plus))
 
-# Восстанавливаем имена столбцов после вменения, 
+# Восстанавливаем имена столбцов после вменения,
 # так как они теряются после использования SimpleImputer
 imputed_X_train_plus.columns = X_train_plus.columns
 imputed_X_valid_plus.columns = X_valid_plus.columns
