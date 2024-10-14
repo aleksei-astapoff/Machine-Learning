@@ -38,7 +38,7 @@ my_pipeline = Pipeline(
 # что привычнее для интерпретации.
 scores = -1 * cross_val_score(
     my_pipeline, X, y,
-    cv=5, # 5-кратная перекрестная проверка (5-fold cross-validation)
+    cv=5,  # 5-кратная перекрестная проверка (5-fold cross-validation)
     # Используем отрицательную среднюю абсолютную ошибку для оценки модели
     scoring='neg_mean_absolute_error')
 
