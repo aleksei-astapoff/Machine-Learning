@@ -44,39 +44,6 @@
 
 Для выбора оптимального размера дерева решений используется поиск по различным значениям параметра `max_leaf_nodes`. Финальная модель обучается с использованием оптимального количества листьев, чтобы минимизировать среднюю абсолютную ошибку.
 
-## Как запустить проект
-
-1. Склонируйте репозиторий:
-
-```
-git clone https://github.com/aleksei-astapoff/intro-to-machine-learning.git
-```
-
-2. #### Создайте и активируйте виртуальное окружение:
-Команда для установки виртуального окружения на Mac или Linux:
-```
-python3 -m venv venv
-
-source venv/bin/activate
-```
-
-Команда для установки виртуального окружения на Windows:
-```
-python -m venv venv
-
-source venv/Scripts/activate
-```
-
-3. #### Установите зависимости:
-```
-pip install -r requirements.txt
-```
-
-4. #### Запустите программу:
-```
-python work_with_TreeRegresso.py
-python work_with_RandomForestRegressor.py
-```
 
 ## Метрики
 
